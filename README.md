@@ -140,6 +140,7 @@ in any resulting publication.
 If using this pipeline in academic work, please cite:
 * NiMARE
 * The original MKDA methodological publication
+
 Additionally, cite any dataset sources used in the meta-analysis.
 
 # Intended Use
