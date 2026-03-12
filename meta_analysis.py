@@ -154,6 +154,14 @@ def run_mkda_fdr_manual(data=None, csv_file=None):
     z_map = corrected.get_map("z")  # corrected z
 
     output_file = "mkda_manual_fdr_z.nii.gz"
+
+    # ==============
+    # PRINT OUT PEAK ACITVATION COORDINATES
+    # ==============
+    stat_img = image.load_img(output_file)
+    table = get_clusters_table(stat_img, stat_threshold = 0, cluster_threshold= 10)
+    print(table)
+    
     z_map.to_filename(output_file)
 
     print(f"Saved corrected map to: {output_file}")
